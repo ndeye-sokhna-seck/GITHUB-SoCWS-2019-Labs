@@ -1,0 +1,7 @@
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\obj\Debug\REST_APP.csprojAssemblyReference.cache
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\obj\Debug\REST_APP.csproj.CoreCompileInputs.cache
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\bin\Debug\REST_APP.dll.config
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\bin\Debug\REST_APP.dll
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\bin\Debug\REST_APP.pdb
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\obj\Debug\REST_APP.dll
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\TD\REST_APP\REST_APP\obj\Debug\REST_APP.pdb
