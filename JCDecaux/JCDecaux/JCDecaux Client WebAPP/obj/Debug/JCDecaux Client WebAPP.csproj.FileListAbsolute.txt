@@ -1,0 +1,14 @@
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\JCDecaux Client WebAPP.exe.config
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\JCDecaux Client WebAPP.exe
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\JCDecaux Client WebAPP.pdb
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csprojAssemblyReference.cache
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux_Client_WebAPP.Form1.resources
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux_Client_WebAPP.Properties.Resources.resources
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.GenerateResource.cache
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.exe
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.pdb
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.CopyComplete
