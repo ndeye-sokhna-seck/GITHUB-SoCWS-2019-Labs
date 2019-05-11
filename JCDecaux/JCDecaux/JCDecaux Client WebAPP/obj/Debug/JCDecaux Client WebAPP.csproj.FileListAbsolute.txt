@@ -12,3 +12,16 @@ C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDeca
 C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.xml
 C:\Users\user\Desktop\Soseck\KIE!\Informatique\SOC & WS\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.CopyComplete
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\JCDecaux Client WebAPP.exe.config
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\JCDecaux Client WebAPP.exe
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\JCDecaux Client WebAPP.pdb
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\bin\Debug\Newtonsoft.Json.xml
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csprojAssemblyReference.cache
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux_Client_WebAPP.Form1.resources
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux_Client_WebAPP.Properties.Resources.resources
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.GenerateResource.cache
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.CoreCompileInputs.cache
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.csproj.CopyComplete
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.exe
+C:\Users\theo_\Documents\webService\GITHUB-SoCWS-2019-Labs\JCDecaux\JCDecaux\JCDecaux Client WebAPP\obj\Debug\JCDecaux Client WebAPP.pdb
