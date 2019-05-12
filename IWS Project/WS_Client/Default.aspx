@@ -2,26 +2,41 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="row" style="margin: 3em 0 3em 0">
-        <div class="col-lg-6 col-sm-12">
-            <div>
-                <label for="Town">Ville</label>
-                <asp:TextBox ID="Town"  CssClass="form-control" runat="server" AutoCompleteType="BusinessCity" OnTextChanged="Town_TextChanged"></asp:TextBox>
-            </div>
-            <div>
-                <label for="NStation">N° Station</label>
-                <asp:TextBox ID="NStation" CssClass="form-control"  runat="server"></asp:TextBox>
-            </div>
+    <h4 class=" display-4"> Bienvenue </h4><hr />
+    <h6 class="text-muted">Selectionnez une ville et retrouvez toutes les stations !</h6>
 
-            <asp:Button ID="SubmitButton" class="btn btn-outline-success mt-4"  runat="server" Text="Trouver" OnClick="SubmitButton_Click" />
-        </div>
-        <div class="col-lg-6 col-sm-12">
-            <p class="mt-sm-3">Resultat</p>
-            <textarea id="Results" class="form-control" cols="300" rows="5">
-                <%=Result%>
-            </textarea>
-        </div>
+    <div class="form form-inline my-5 px-3 row">
+         <label for="choice" class="pr-1 col-lg-2">Choisir une ville</label><br>
+         <asp:TextBox ID="choice" CssClass="form-control input-sm col-7 mr-1" AutoCompleteType="Search" runat="server"></asp:TextBox>
+         <asp:Button ID="SubmitButton" class="btn btn-success col-2"  runat="server" Text="Trouver" OnClick="SubmitButton_Click" />
     </div>
+  
+
+    <table style="width: 100%;" class="table table-hover mb-5">
+        <thead class="thead-dark">
+             <tr>
+            <th>Statut</th>
+            <th>Adresse</th>
+            <th>Vélos disponibles</th>
+            <th>Stands disponibles</th>
+        </tr>
+        </thead>
+       <tbody>
+           <tr>
+            <td>Statut</td>
+            <td>Adresse</td>
+            <td>Vélos disponibles</td>
+            <td>Stands disponibles</td>
+        </tr>
+        <tr>
+            <td>Statut</td>
+            <td>Adresse</td>
+            <td>Vélos disponibles</td>
+            <td>Stands disponibles</td>
+        </tr>
+       </tbody>
+        
+    </table>
 
 
 </asp:Content>

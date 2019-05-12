@@ -13,22 +13,13 @@ namespace WS_Client {
     public partial class _Default {
         
         /// <summary>
-        /// Town control.
+        /// choice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Town;
-        
-        /// <summary>
-        /// NStation control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NStation;
+        protected global::System.Web.UI.WebControls.TextBox choice;
         
         /// <summary>
         /// SubmitButton control.
