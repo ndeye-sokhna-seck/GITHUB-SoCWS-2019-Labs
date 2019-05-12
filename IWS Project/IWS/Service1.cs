@@ -10,22 +10,15 @@ namespace IWS
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class Service1 : IService1
     {
-        public string GetData(int value)
+        public string GetCarto()
         {
-            return string.Format("You entered: {0}", value);
+            return "Hello";
         }
 
-        public CompositeType GetDataUsingDataContract(CompositeType composite)
+        public string GetStationDetails(string town, int stationNb)
         {
-            if (composite == null)
-            {
-                throw new ArgumentNullException("composite");
-            }
-            if (composite.BoolValue)
-            {
-                composite.StringValue += "Suffix";
-            }
-            return composite;
+            return "Hi";
         }
+
     }
 }
