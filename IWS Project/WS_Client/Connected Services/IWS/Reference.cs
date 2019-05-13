@@ -9,23 +9,23 @@
 //------------------------------------------------------------------------------
 
 namespace WS_Client.IWS {
-    
-    
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IWS.IService1")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "IWS.IService1")]
     public interface IService1 {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoadCities", ReplyAction="http://tempuri.org/IService1/LoadCitiesResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/LoadCities", ReplyAction = "http://tempuri.org/IService1/LoadCitiesResponse")]
         string LoadCities();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/LoadCities", ReplyAction="http://tempuri.org/IService1/LoadCitiesResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/LoadCities", ReplyAction = "http://tempuri.org/IService1/LoadCitiesResponse")]
         System.Threading.Tasks.Task<string> LoadCitiesAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStationDetails", ReplyAction="http://tempuri.org/IService1/GetStationDetailsResponse")]
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetStationDetails", ReplyAction = "http://tempuri.org/IService1/GetStationDetailsResponse")]
         string GetStationDetails(string contract_name);
 
         [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetStatistics", ReplyAction = "http://tempuri.org/IService1/GetStatistics")]
-        string GetStatistics();
+        int[] GetStatistics();
 
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStationDetails", ReplyAction="http://tempuri.org/IService1/GetStationDetailsResponse")]
         System.Threading.Tasks.Task<string> GetStationDetailsAsync(string contract_name);
@@ -70,7 +70,7 @@ namespace WS_Client.IWS {
             return base.Channel.GetStationDetails(contract_name);
         }
 
-        public string GetStatistics()
+        public int[] GetStatistics()
         {
             return base.Channel.GetStatistics();
         }

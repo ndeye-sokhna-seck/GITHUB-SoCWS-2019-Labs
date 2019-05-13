@@ -31,6 +31,7 @@ namespace WS_Client {
         protected global::System.Web.UI.WebControls.DropDownList choice;
         
         /// <summary>
+        /// Contrôle TextBox1.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.

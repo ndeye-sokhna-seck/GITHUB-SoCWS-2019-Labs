@@ -18,7 +18,7 @@ namespace IWS
         string GetStationDetails(string contract_name);
 
         [OperationContract]
-        string GetStatistics();
+        int[] GetStatistics();
 
     }
 

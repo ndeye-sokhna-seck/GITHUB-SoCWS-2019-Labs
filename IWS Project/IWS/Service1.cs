@@ -47,13 +47,15 @@ namespace IWS
         public string connected;
         public Stand totalStands;
     }
+
+
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class Service1 : IService1
     {
         private string apiKey = "b8ee022e29ffee22c471d6ad6b59c740e1e99ac4";
-        private int nbrCallStationDetails = 0;
-        private int nbrCallLoadCities = 0;
 
+        static int nbrCallStationDetails = 0;
+        static int nbrCallLoadCities = 0;
         public string GetStationDetails(string contract_name)
         {
             nbrCallStationDetails++;
@@ -110,9 +112,9 @@ namespace IWS
 
         }
 
-        public string GetStatistics()
+        public int[] GetStatistics()
         {
-            string toReturn = String.Concat("{ \"nbrCallDetails\": \"", nbrCallStationDetails, "\", \"nbrCallLoadCities\": ",nbrCallLoadCities);
+            int[] toReturn = { nbrCallStationDetails, nbrCallLoadCities };
             return toReturn;
         }
 

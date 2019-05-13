@@ -30,16 +30,18 @@ namespace WS_Client
 
     public partial class _Default : Page
     {
-        private string stats;
+        public int[] stats = { 0, 0 };
         private List<Station> result;
         private List<Contract> cities;
-        private string draft; 
+        private string draft;
+        public bool asked = false;
+        IWS.Service1Client service = new IWS.Service1Client();
+
         public List<Station> Result { get { return result; } }
         public List<Contract> Cities { get { return cities; } }
         public string Draft { get { return draft; } }
         protected void Page_Load(object sender, EventArgs e)
         {
-            IWS.Service1Client service = new IWS.Service1Client();
             result = new List<Station>();
             
             cities = JsonConvert.DeserializeObject<List<Contract>>(service.LoadCities());
@@ -54,7 +56,6 @@ namespace WS_Client
 
         protected void getStationList(object sender, EventArgs e)
         {
-            IWS.Service1Client service = new IWS.Service1Client();
             //draft = choice.SelectedItem.Text;
             //TextBox1.Text = draft;
             result = JsonConvert.DeserializeObject <List<Station>>(service.GetStationDetails(choice.SelectedItem.Value));
@@ -62,7 +63,7 @@ namespace WS_Client
         }
         protected void GetStatistics(object sender, EventArgs e)
         {
-            IWS.Service1Client service = new IWS.Service1Client();
+            asked = true;
             stats = service.GetStatistics();
         }
     }
