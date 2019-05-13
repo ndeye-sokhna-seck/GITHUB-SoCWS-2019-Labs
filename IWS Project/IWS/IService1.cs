@@ -17,6 +17,9 @@ namespace IWS
         [OperationContract]
         string GetStationDetails(string contract_name);
 
+        [OperationContract]
+        string GetStatistics();
+
     }
 
     // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.

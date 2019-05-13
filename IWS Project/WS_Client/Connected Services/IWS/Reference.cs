@@ -23,7 +23,10 @@ namespace WS_Client.IWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStationDetails", ReplyAction="http://tempuri.org/IService1/GetStationDetailsResponse")]
         string GetStationDetails(string contract_name);
-        
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IService1/GetStatistics", ReplyAction = "http://tempuri.org/IService1/GetStatistics")]
+        string GetStatistics();
+
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetStationDetails", ReplyAction="http://tempuri.org/IService1/GetStationDetailsResponse")]
         System.Threading.Tasks.Task<string> GetStationDetailsAsync(string contract_name);
     }
@@ -65,6 +68,11 @@ namespace WS_Client.IWS {
         
         public string GetStationDetails(string contract_name) {
             return base.Channel.GetStationDetails(contract_name);
+        }
+
+        public string GetStatistics()
+        {
+            return base.Channel.GetStatistics();
         }
         
         public System.Threading.Tasks.Task<string> GetStationDetailsAsync(string contract_name) {

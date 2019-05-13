@@ -18,6 +18,7 @@ namespace WS_Client
     public partial class _Default : Page
     {
         private string result;
+        private string stats;
         private List<Contract> cities;
         public string Result { get { return result; } }
         public List<Contract> Cities { get { return cities; } }
@@ -44,6 +45,11 @@ namespace WS_Client
             //if (isNStationValid)
              result = service.GetStationDetails(choice.SelectedItem.Value);
            
+        }
+        protected void GetStatistics(object sender, EventArgs e)
+        {
+            IWS.Service1Client service = new IWS.Service1Client();
+            stats = service.GetStatistics();
         }
     }
 }

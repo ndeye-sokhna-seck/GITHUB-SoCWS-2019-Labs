@@ -14,9 +14,10 @@ using Newtonsoft.Json;
 namespace IWS
 
 {
-
+    
     public class Contract
     {
+        
         public string name;
         public List<string> cities;
 
@@ -25,8 +26,12 @@ namespace IWS
     public class Service1 : IService1
     {
         private string apiKey = "b8ee022e29ffee22c471d6ad6b59c740e1e99ac4";
+        private int nbrCallStationDetails = 0;
+        private int nbrCallLoadCities = 0;
+
         public string GetStationDetails(string contract_name)
         {
+            nbrCallStationDetails++;
             try
             {
                 WebRequest request = WebRequest.Create(String.Concat("https://api.jcdecaux.com/vls/v3/stations?contract=", contract_name, "&apiKey=", apiKey));
@@ -70,9 +75,15 @@ namespace IWS
 
         }
 
+        public string GetStatistics()
+        {
+            string toReturn = String.Concat("{ \"nbrCallDetails\": \"", nbrCallStationDetails, "\", \"nbrCallLoadCities\": ",nbrCallLoadCities);
+            return toReturn;
+        }
+
         public string LoadCities()
         {
- 
+            nbrCallLoadCities++;
             // Create a request for the URL.   
             WebRequest request = WebRequest.Create(String.Concat("https://api.jcdecaux.com/vls/v3/contracts?apiKey=", apiKey));
             // If required by the server, set the credentials.  
