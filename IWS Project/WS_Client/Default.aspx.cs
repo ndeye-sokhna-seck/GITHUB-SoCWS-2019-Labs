@@ -15,16 +15,32 @@ namespace WS_Client
         public List<string> cities;
 
     }
+    public class Station
+    {
+        public string number;
+        public string name;
+        public string address;
+        public string bikes;
+        public string stands;
+        public string latitude;
+        public string longitude;
+        public string status;
+        public string connected;
+    }
+
     public partial class _Default : Page
     {
-        private string result;
         private string stats;
+        private List<Station> result;
         private List<Contract> cities;
-        public string Result { get { return result; } }
+        private string draft; 
+        public List<Station> Result { get { return result; } }
         public List<Contract> Cities { get { return cities; } }
+        public string Draft { get { return draft; } }
         protected void Page_Load(object sender, EventArgs e)
         {
             IWS.Service1Client service = new IWS.Service1Client();
+            result = new List<Station>();
             
             cities = JsonConvert.DeserializeObject<List<Contract>>(service.LoadCities());
             List<ListItem> items = new List<ListItem>();
@@ -34,17 +50,15 @@ namespace WS_Client
             }
             choice.DataSource = items;
             choice.DataBind();
-
         }
 
-        protected void SubmitButton_Click(object sender, EventArgs e)
+        protected void getStationList(object sender, EventArgs e)
         {
             IWS.Service1Client service = new IWS.Service1Client();
-            //int num;
-            //bool isNStationValid = Int32.TryParse(NStation.Text.ToString(), out num);
-            //if (isNStationValid)
-             result = service.GetStationDetails(choice.SelectedItem.Value);
-           
+            //draft = choice.SelectedItem.Text;
+            //TextBox1.Text = draft;
+            result = JsonConvert.DeserializeObject <List<Station>>(service.GetStationDetails(choice.SelectedItem.Value));
+            //draft = service.GetStationDetails(choice.SelectedItem.Value);
         }
         protected void GetStatistics(object sender, EventArgs e)
         {

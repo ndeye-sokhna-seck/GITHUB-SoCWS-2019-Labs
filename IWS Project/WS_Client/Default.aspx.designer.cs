@@ -31,12 +31,11 @@ namespace WS_Client {
         protected global::System.Web.UI.WebControls.DropDownList choice;
         
         /// <summary>
-        /// Contrôle SubmitButton.
         /// </summary>
         /// <remarks>
         /// Champ généré automatiquement.
         /// Pour modifier, déplacez la déclaration de champ du fichier de concepteur dans le fichier code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitButton;
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
     }
 }

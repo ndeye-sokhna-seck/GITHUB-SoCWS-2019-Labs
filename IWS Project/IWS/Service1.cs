@@ -22,6 +22,31 @@ namespace IWS
         public List<string> cities;
 
     }
+    public class Availabitity
+    {
+        public string bikes;
+        public string stands;
+    }
+    public class Stand
+    {
+        public Availabitity availabilities;
+        public string capacity;
+    }
+    public class Position
+    {
+        public string latitude;
+        public string longitude;
+    }
+    public class Station
+    {
+        public string number;
+        public string name;
+        public string address;
+        public Position position;
+        public string status;
+        public string connected;
+        public Stand totalStands;
+    }
     // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom de classe "Service1" à la fois dans le code et le fichier de configuration.
     public class Service1 : IService1
     {
@@ -51,9 +76,19 @@ namespace IWS
                     StreamReader reader = new StreamReader(dataStream);
                     // Read the content.  
                     string responseFromServer = reader.ReadToEnd();
-                    dynamic res = JsonConvert.DeserializeObject(responseFromServer).ToString();
+                    List<Station> res = JsonConvert.DeserializeObject<List<Station>>(responseFromServer);
                     //response.Close();
-                    return res;
+                    //return res[0].totalStands.availabilities.stands;
+                    string finalRes = "[";
+                    foreach (Station s in res)
+                    {
+                        finalRes = String.Concat(finalRes, "{ \"name\": \"", s.name, "\", \"number\": ", s.number, ", \"address\": \"", s.address, 
+                                                            "\", \"bikes\": ", s.totalStands.availabilities.bikes, ", \"stands\": ", s.totalStands.availabilities.stands,
+                                                              ", \"connected\": \"", s.connected, "\", \"status\": \"", s.status,
+                                                              "\", \"latitude\": \"", s.position.latitude, "\", \"longitude\": \"", s.position.longitude, "\" },");
+                    }
+                    finalRes = String.Concat(finalRes, " ]");
+                    return finalRes;
                 }
             }
             catch (WebException ex)
