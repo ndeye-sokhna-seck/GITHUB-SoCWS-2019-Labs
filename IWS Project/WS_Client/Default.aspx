@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WS_Client._Default" %>
+﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" MaintainScrollPositionOnPostback="true" CodeBehind="Default.aspx.cs" Inherits="WS_Client._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -7,38 +7,36 @@
 
     <div class="form form-inline my-5 px-3 row">
         <label for="choice" class="pr-1 col-lg-2">Choisir une ville</label><br>
-        <asp:DropDownList ID="choice" runat="server"  class="form-control form-control-lg col-7 mr-1">
+        <asp:DropDownList ID="choice" runat="server" AutoPostBack="true" class="form-control form-control-lg col-7 mr-1" OnSelectedIndexChanged="getStationList">
         </asp:DropDownList>      
-        <asp:Button ID="SubmitButton" class="btn btn-success col-2"  runat="server" Text="Trouver" OnClick="SubmitButton_Click" />
     </div>
 
-    <table style="width: 100%;" class="table table-hover mb-5">
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
+    <% if (Result.Count > 0)
+            { %>
+        <h6 class="text-muted"><%: choice.SelectedItem.Value %></h6>
+        <table style="width: 100%;" class="table table-hover mb-5">
         <thead class="thead-dark">
-             <tr>
+            <tr>
             <th>Statut</th>
             <th>Adresse</th>
             <th>Vélos disponibles</th>
             <th>Stands disponibles</th>
-        </tr>
+            </tr>
         </thead>
-       <tbody>
-           <tr>
-            <td>Statut</td>
-            <td>Adresse</td>
-            <td>Vélos disponibles</td>
-            <td>Stands disponibles</td>
-        </tr>
-        <tr>
-            <td>Statut</td>
-            <td>Adresse</td>
-            <td>Vélos disponibles</td>
-            <td>Stands disponibles</td>
-        </tr>
-       </tbody>
-        
-    </table>
-
-   <div class="text-danger"><%=Result%></div>
-
+            <tbody>
+        <% foreach (var station in Result)
+            { %>
+            <tr>
+                <td> <%: station.status %></td>
+                <td><%: station.address %> </td>
+                <td> <%: station.bikes %> </td>
+                <td> <%: station.stands %> </td>
+            </tr>
+        <% }  %>
+        </tbody>
+        </table>
+            <% } %>
 </asp:Content>
 

@@ -7950,6 +7950,8 @@ button.bg-dark:focus {
 .mr-1,
 .mx-1 {
   margin-right: 0.25rem !important;
+    top: 0px;
+    left: 11px;
 }
 
 .mb-1,
