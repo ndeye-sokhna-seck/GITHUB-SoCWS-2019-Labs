@@ -19,7 +19,7 @@ namespace WS_Client {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox choice;
+        protected global::System.Web.UI.WebControls.DropDownList choice;
         
         /// <summary>
         /// SubmitButton control.

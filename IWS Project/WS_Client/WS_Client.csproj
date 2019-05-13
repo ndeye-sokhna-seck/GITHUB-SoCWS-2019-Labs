@@ -18,9 +18,12 @@
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort>44337</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
-    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>
+    </IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>
+    </IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -116,17 +119,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
-    <None Include="Connected Services\IWS_Velib\item.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IWS_Velib\item1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\IWS_Velib\Service1.wsdl" />
-    <None Include="Connected Services\IWS_Velib\item.disco" />
-    <None Include="Connected Services\IWS_Velib\configuration91.svcinfo" />
-    <None Include="Connected Services\IWS_Velib\configuration.svcinfo" />
-    <None Include="Connected Services\IWS_Velib\Reference.svcmap">
+    <None Include="Connected Services\IWS\item.disco" />
+    <None Include="Connected Services\IWS\configuration91.svcinfo" />
+    <None Include="Connected Services\IWS\configuration.svcinfo" />
+    <None Include="Connected Services\IWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -171,6 +167,13 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <None Include="Connected Services\IWS\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IWS\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\IWS\Service1.wsdl" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -226,7 +229,7 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Connected Services\IWS_Velib\Reference.cs">
+    <Compile Include="Connected Services\IWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -240,7 +243,6 @@
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -298,13 +300,13 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\IWS_Velib\" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\IWS\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

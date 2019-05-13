@@ -12,10 +12,10 @@ namespace IWS
     public interface IService1
     {
         [OperationContract]
-        string GetCarto();
+        string LoadCities();
 
         [OperationContract]
-        string GetStationDetails(string town, int stationNb);
+        string GetStationDetails(string contract_name);
 
     }
 

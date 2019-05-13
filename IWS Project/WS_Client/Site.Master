@@ -51,10 +51,7 @@
                     <a class="nav-link" runat="server" href="~/">Accueil</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/About">À propos de</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/Contact">Contact</a>
+                    <a class="nav-link" runat="server" href="~/About">Trouver un itinéraire</a>
                   </li>
                 </ul>
             </div>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7bd21461-7679-4c20-8821-b3991d98595a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f60da938-29d0-4ee1-85fd-694459aa6168" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,10 +22,10 @@
     <MetadataSource Address="http://localhost:8733/IWS/Service1/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="dcaa06be-e309-4300-a993-ffe3927c2eb0" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?xsd=xsd0" />
-    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="eafa7723-e88b-422a-8d70-81d6a455bec3" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?wsdl" />
-    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="2b8fb5a0-439a-4c0f-904b-77548a005fd0" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?xsd=xsd1" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="9699564b-9f52-418d-bfe2-f4832b1c7134" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="05875aec-e709-4b7c-9969-b7797f270ada" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?xsd=xsd0" />
+    <MetadataFile FileName="Service1.wsdl" MetadataType="Wsdl" ID="efd16eaf-ff09-48fe-8717-43b66540636a" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?wsdl" />
+    <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="1c774a74-2280-41c9-a84a-bbb38607333d" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="ca049b30-508b-4612-b822-8231f5e71e75" SourceId="1" SourceUrl="http://localhost:8733/IWS/Service1/?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
