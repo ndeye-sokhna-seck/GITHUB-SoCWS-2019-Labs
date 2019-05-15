@@ -53,9 +53,6 @@
                   <li class="nav-item">
                     <a class="nav-link" runat="server" href="~/About">Trouver un itinéraire</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" runat="server" href="~/Inscription">Inscription</a>
-                  </li>
                 </ul>
             </div>
            </div>

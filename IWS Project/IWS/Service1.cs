@@ -61,37 +61,19 @@ namespace IWS
             nbrCallStationDetails++;
             try
             {
-                WebRequest request = WebRequest.Create(String.Concat("https://api.jcdecaux.com/vls/v3/stations?contract=", contract_name, "&apiKey=", apiKey));
-                // If required by the server, set the credentials.  
-                request.Credentials = CredentialCache.DefaultCredentials;
-
-                // Get the response.  
-                WebResponse response = request.GetResponse();
-                // Display the status.  
-                Console.WriteLine(((HttpWebResponse)response).StatusDescription);
-
-                // Get the stream containing content returned by the server. 
-                // The using block ensures the stream is automatically closed. 
-                using (Stream dataStream = response.GetResponseStream())
+                List<Station> res = CacheManager.getCachedStation(contract_name);
+                //response.Close();
+                //return res[0].totalStands.availabilities.stands;
+                string finalRes = "[";
+                foreach (Station s in res)
                 {
-                    // Open the stream using a StreamReader for easy access.  
-                    StreamReader reader = new StreamReader(dataStream);
-                    // Read the content.  
-                    string responseFromServer = reader.ReadToEnd();
-                    List<Station> res = JsonConvert.DeserializeObject<List<Station>>(responseFromServer);
-                    //response.Close();
-                    //return res[0].totalStands.availabilities.stands;
-                    string finalRes = "[";
-                    foreach (Station s in res)
-                    {
-                        finalRes = String.Concat(finalRes, "{ \"name\": \"", s.name, "\", \"number\": ", s.number, ", \"address\": \"", s.address, 
-                                                            "\", \"bikes\": ", s.totalStands.availabilities.bikes, ", \"stands\": ", s.totalStands.availabilities.stands,
-                                                              ", \"connected\": \"", s.connected, "\", \"status\": \"", s.status,
-                                                              "\", \"latitude\": \"", s.position.latitude, "\", \"longitude\": \"", s.position.longitude, "\" },");
-                    }
-                    finalRes = String.Concat(finalRes, " ]");
-                    return finalRes;
+                    finalRes = String.Concat(finalRes, "{ \"name\": \"", s.name, "\", \"number\": ", s.number, ", \"address\": \"", s.address,
+                                                        "\", \"bikes\": ", s.totalStands.availabilities.bikes, ", \"stands\": ", s.totalStands.availabilities.stands,
+                                                          ", \"connected\": \"", s.connected, "\", \"status\": \"", s.status,
+                                                          "\", \"latitude\": \"", s.position.latitude, "\", \"longitude\": \"", s.position.longitude, "\" },");
                 }
+                finalRes = String.Concat(finalRes, " ]");
+                return finalRes;
             }
             catch (WebException ex)
             {
@@ -121,46 +103,28 @@ namespace IWS
         public string LoadCities()
         {
             nbrCallLoadCities++;
-            // Create a request for the URL.   
-            WebRequest request = WebRequest.Create(String.Concat("https://api.jcdecaux.com/vls/v3/contracts?apiKey=", apiKey));
-            // If required by the server, set the credentials.  
-            request.Credentials = CredentialCache.DefaultCredentials;
-
-            // Get the response.  
-            WebResponse response = request.GetResponse();
-            // Display the status.  
-            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
-
-            // Get the stream containing content returned by the server. 
-            // The using block ensures the stream is automatically closed. 
-            using (Stream dataStream = response.GetResponseStream())
+            // Create a request for the URL.  
+            List<Contract> res = CacheManager.GetCachedContracts();
+            //response.Close();
+            string finalRes = "[";
+            foreach (Contract c in res)
             {
-                // Open the stream using a StreamReader for easy access.  
-                StreamReader reader = new StreamReader(dataStream);
-                // Read the content.  
-                string responseFromServer = reader.ReadToEnd();
-                List<Contract> res = JsonConvert.DeserializeObject<List<Contract>>(responseFromServer);
-                //response.Close();
-                string finalRes = "[";
-                foreach(Contract c in res)
+                finalRes = String.Concat(finalRes, "{ \"name\": \"", c.name, "\", \"cities\": ");
+                if (c.cities != null)
                 {
-                    finalRes = String.Concat(finalRes, "{ \"name\": \"", c.name, "\", \"cities\": ");
-                    if (c.cities != null)
+                    finalRes = String.Concat(finalRes, " [ ");
+                    foreach (string el in c.cities)
                     {
-                        finalRes = String.Concat(finalRes, " [ ");
-                        foreach (string el in c.cities)
-                        {
-                            finalRes = String.Concat(finalRes, " \"", el , "\", ");
-                        }
-                        finalRes = String.Concat(finalRes, "] },");
+                        finalRes = String.Concat(finalRes, " \"", el, "\", ");
                     }
-                    else finalRes = String.Concat(finalRes, "null },");
-                   
+                    finalRes = String.Concat(finalRes, "] },");
                 }
-                finalRes = String.Concat(finalRes, " ]");
-                return finalRes;
-                
+                else finalRes = String.Concat(finalRes, "null },");
+
             }
+            finalRes = String.Concat(finalRes, " ]");
+            return finalRes;
+
         }
     }
 }

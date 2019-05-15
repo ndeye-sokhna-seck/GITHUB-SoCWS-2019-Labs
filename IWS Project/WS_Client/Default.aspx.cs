@@ -63,7 +63,6 @@ namespace WS_Client
         }
         protected void GetStatistics(object sender, EventArgs e)
         {
-            asked = true;
             stats = service.GetStatistics();
         }
     }
